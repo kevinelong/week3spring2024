@@ -1,0 +1,15 @@
+<body>
+    <input id="username" placeholder="enter your name here">
+    <div id="output">?</div>
+</body>
+<script>
+    function greet(name){
+        return "Howdy " + name + "!!!";
+    }
+    username.onkeydown = (e)=>{
+        console.log(e)
+        output.innerText = greet(username.value + e.key);
+    }
+
+    //username.onkeydown({key:"Z"})
+</script>
