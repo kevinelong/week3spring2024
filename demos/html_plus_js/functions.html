@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="functions.js"></script>
+</head>
+<body>
+    <input type="number" id="x" value="6">
+    <input type="number" id="y" value="7">
+    <input type="number" id="z" readonly>
+    <button id="go">GO</button>
+    <hr>
+    <input type="text" id="age" value="3">
+    <button id="run">RUN</button>
+    <input type="text" id="rec" readonly>
+</body>
+<script>
+    
+    go.onclick = () => z.value = add(Number(x.value), Number(y.value));
+
+    run.onclick = () => rec.value = recommend(Number(age.value));
+
+    function handleClick(){
+        let text = recommend(Number(age.value));
+        rec.value = text;
+    }
+    run = document.getElementById("run")
+    run.addEventListener("click", handleClick);
+
+</script>
+</html>
